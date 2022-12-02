@@ -1,0 +1,39 @@
+.contacts {
+  height: 100vh;
+  animation: smoothshow 0.7s ease-in;
+  padding: 130px 0 60px 0;
+  .container {
+    height: 100%;
+    .content {
+      border: 1px solid limegreen;
+      .col100 {
+        color: #ffffff;
+        text-align: center;
+        padding: 40px 20px;
+        h1 {
+          font-size: 3rem;
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          margin-top: 5vh;
+          li {
+            margin: 0 20px;
+            cursor: pointer;
+            a {
+              img {
+                @include mq(0, 767px) {
+                  width: 60px;
+                  height: 70px;
+                }
+              }
+            }
+          }
+          @include mq(0, 767px) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

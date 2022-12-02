@@ -1,0 +1,81 @@
+.image1 { grid-area: image1; }
+.image2 { grid-area: image2; }
+.image3 { grid-area: image3; }
+.image4 { grid-area: image4; }
+.image5 { grid-area: image5; }
+.image6 { grid-area: image6; }
+.image7 { grid-area: image7; }
+.image8 { grid-area: image8; }
+.image9 { grid-area: image9; }
+.image10 { grid-area: image10; }
+
+.grid {
+    width: 100%;
+    .wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        #grid-container {
+            display: grid;
+            grid-template-areas:
+                'image1 image3 image6 image9'
+                'image1 image4 image7 image10'
+                'image2 image5 image8 image10';
+            grid-gap: 10px;
+            // background-color: aquamarine;
+
+            @include mq(0,998px) {
+                grid-template-areas:
+                'image1 image4 image8'
+                'image1 image5 image9'
+                'image2 image6 image10'
+                'image3 image7 image10';
+            }
+            @include mq(0,767px) {
+                grid-template-areas:
+                'image1 image6'
+                'image1 image7'
+                'image2 image8'
+                'image3 image9'
+                'image4 image10'
+                'image5 image10';
+            }
+            @include mq(0,439px) {
+                grid-template-areas:
+                'image1'
+                'image1'
+                'image2'
+                'image3'
+                'image4'
+                'image5'
+                'image6'
+                'image7'
+                'image8'
+                'image9'
+                'image10'
+                'image10';
+            }
+            img {
+                width: 100%;
+                border-radius: 5px;
+                filter: grayscale(60%);
+                transition: all $hover_time $anime_curve;
+                &:hover {
+                    transform: scale($scale_img);
+                    box-shadow: 10px 10px 30px rgba(0,0,0,.5);
+                    filter: drop-shadow(16px 16px 20px black);
+                    outline-style: solid;
+                    outline-color: rgba(255,255,255,.5);
+                    outline-width: 10px;
+                    outline-offset: 15px;
+                    filter: grayscale(0%);
+                    position: relative;
+                    z-index: 10;
+                    @include mq(0,439px) {
+                        transform: unset;
+                        outline-offset: unset;
+                    }
+                }
+            }
+        }
+    }
+}

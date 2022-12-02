@@ -1,0 +1,67 @@
+.aboutme {
+  height: 100vh;
+  animation: smoothshow 0.7s ease-in;
+  padding: 130px 0 60px 0;
+  .container {
+    height: 100%;
+    .content {
+      border: 2px solid $text-color;
+      border-radius: 20px;
+      .row {
+        margin-bottom: 25px;
+        .aboutme-content {
+          width: 50%;
+          color: #ffffff;
+          text-align: center;
+          h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+          }
+          h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+          }
+        }
+        .skills {
+          margin-top: 40px;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          .col-sm {
+            display: inline-block;
+          }
+          .skills-content {
+            flex-direction: row;
+          }
+          .square1 {
+            width: 13px;
+            height: 13px;
+            border-radius: 3px;
+            border: 1px solid rgb(186, 186, 186);
+            background-color: #dee6ef;
+            display: inline-block;
+          }
+          .square2 {
+            @extend .square1;
+            background-color: #b4c7dc;
+          }
+          .square3 {
+            @extend .square1;
+            background-color: #729fcf;
+          }
+          .square4 {
+            @extend .square1;
+            background-color: #3465a4;
+          }
+          .square5 {
+            @extend .square1;
+            background-color: #355269;
+          }
+          .inactive {
+            background-color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$text-color: #0971af;
+$brighter-text-color: #7dacc9;
+$text-shadow: 0 0 5px #276183;
+$brighter-text-shadow: 0 0 15px #84a9be;
+$animationlength: 1s;
+
+@mixin mq($smallerValue, $biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+@mixin mqheight($smallerValue, $biggerValue) {
+  @media (min-height: #{$smallerValue}) and (max-height: $biggerValue) {
+    @content;
+  }
+}

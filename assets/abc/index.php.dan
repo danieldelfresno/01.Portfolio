@@ -1,0 +1,515 @@
+<?php
+	session_start();
+	$vemdopost = $_POST;
+	if ($vemdopost['idade'])
+	{
+		$_SESSION['idade'] = $vemdopost['idade'];
+	}
+?>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<title>ABC - Arrábida Beer Company</title>
+	<meta name="description" content="Kraft Beer Portuguesa. Cervejas fabricadas pelo método artesanal.">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="rodcss/abc_rodstyles.css?v=1.0">
+
+	<script>
+	function desliga(nomediv) {
+	document.getElementById(nomediv).style.visibility = "hidden";
+	}
+	</script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+
+//   var _gaq = _gaq || [];
+//   _gaq.push(['_setAccount', 'UA-34487454-1']);
+//   _gaq.push(['_setDomainName', 'portugalia.pt']);
+//   _gaq.push(['_trackPageview']);
+// 
+//   (function() {
+//     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//   })();
+
+</script>
+
+</head>
+<body<?php if ($vemdopost['idade']) { ?> onload="corrocImg();" <?php } ?>>
+		<div id="degrad">
+			<object class="corrig" type="image/svg+xml" data="images/degabc_tonone.svg" width="1182px" height="350px"> </object> 
+		</div><!-- degrad -->
+<hgroup>
+<nav id="menuprincipal">
+<ul class="menuprinc">
+	<li class="menu1op"><a onclick="vaiParaNaJanela('0'); return true;" >Home</a></li>
+	<li><div class="separador">&nbsp;</div></li>
+	<li class="menu2op"><a onclick="vaiParaNaJanela('768'); return true;">sobre</a></li>
+	<li><div class="separador">&nbsp;</div></li>
+	<li class="menu3op"><a onclick="vaiParaNaJanela('1198'); return true;">As Nossas Cervejas</a></li>
+	<li><div class="separador">&nbsp;</div></li>
+	<li class="menu4op"><a onclick="vaiParaNaJanela('1962'); return true;">Loja</a></li>
+	<li><div class="logomenu">
+	<object type="image/svg+xml" data="images/logoabcmenu.svg" width="114px" height="114px"> </object></div></li>
+	<li class="menu45op"><a onclick="vaiParaNaJanela('2636'); return true;">Tap House</a></li>
+	<li><div class="separador2">&nbsp;</div></li>
+	<li class="menu5op"><a onclick="vaiParaNaJanela('3080'); return true;">Novidades & Dicas</a></li>
+	<li><div class="separador2">&nbsp;</div></li>
+	<li class="menu6op"><a onclick="vaiParaNaJanela('3552'); return true;">Contacto</a></li>
+	<li><div class="separador2">&nbsp;</div></li>
+	<li class="menu8op"><a >pt</a>|<a >eng</a></li>
+</ul>
+</nav>
+	<div id="moldur">
+		<object type="image/svg+xml" data="images/molduraabcsemlupulos.svg" width="985px" height="670px"> </object> 
+			<div id="homebolas1" class="homebols">
+			<a onclick="mudaImagMan('1'); return true;">
+				<div id="bolhom1" class="bolashome">
+				</div>
+			</a>
+			<img src="images/transp.png" width="17px" height="17px" />
+			<a onclick="mudaImagMan('2'); return true;">
+				<div id="bolhom2" class="bolashomeOff">
+				</div>
+			</a>
+			<img src="images/transp.png" width="17px" height="17px" />
+			<a onclick="mudaImagMan('3'); return true;">
+				<div id="bolhom3" class="bolashomeOff">
+				</div>
+			</a>
+			</div><!-- homebolas1 -->
+	</div><!-- moldurpeq -->
+	<div id="moldurpeq" style="display: none;">
+		<object type="image/svg+xml" data="images/molduraabcred.svg" width="985px" height="36px"> </object> 
+	</div><!-- moldurpeq -->
+</hgroup>
+	<div id="primeibloco">
+	<span id="um"></span>
+		<div id="homeimg1" class="homecarroc" >
+			<div id="hometext1" class="hometxtcorroc" >
+				<img src="images/fu01abc_01txt.png" alt="" /> <!-- ou pode ser texto aqui em vez da imagem. -->
+			</div><!-- hometext1 -->
+<!-- 
+			<a onclick="mudaImagMan('3'); return true;">
+			<div id="homebolas1" class="homebol">
+				<img src="images/bolasabc_01.png" alt="" />
+			</div><!~~ homebolas1 ~~>
+			</a>
+ -->
+			<img src="images/fu01abc.jpg" alt="" />
+		</div><!-- homeimg1 -->
+		<div id="homeimg2" class="homecarroc" >
+			<div id="hometext2" class="hometxtcorroc" >
+				<p class="dist"><span class="hotxcarsub">Nascida numa das mais belas regiões do planeta.</span></p>
+				<p>isto é <span class="hotxcarsub bold">ABC!</span></p>
+			</div><!-- hometext2 -->
+<!-- 
+			<div id="homebolas2" class="homebol">
+				<img src="images/bolasabc_02.png" alt="" />
+			</div><!~~ homebolas2 ~~>
+ -->
+			<img src="images/fu02abc.jpg" alt="" />
+		</div><!-- homeimg2 -->
+		<div id="homeimg3" class="homecarroc" >
+			<div id="hometext3" class="hometxtcorroc" >
+				<p class="dist">O resto é paisagem.</p> <!-- ou pode ser texto aqui em vez da imagem. -->
+			</div><!-- hometext3 -->
+<!-- 
+			<div id="homebolas3" class="homebol">
+				<img src="images/bolasabc_03.png" alt="" />
+			</div><!~~ homebolas3 ~~>
+ -->
+			<img src="images/fu03abc.jpg" alt="" />
+		</div><!-- homeimg3 -->
+	</div><!-- primeibloco -->
+	<span id="dois"></span>
+	<div class="zeraestilos"></div>
+	<div id="segundbloco">
+		<div id="contsegund">
+			<h1>EM PORTUGAL, UMA NOVA ESPÉCIE DE CERVEJA ARTESANAL</h1>
+			<p>&nbsp;</p>
+			<p>A ABC nasceu da paixão de beber uma excelente cerveja artesanal entre amigos. Foram reunidos os melhores ingredientes para criar uma cerveja viva e a sério, obedecendo ao melhor método de produção existente.</p><br>
+			<p>Conheça a Arrábida Beer Company, uma Marca para todos aqueles que desejam saborear uma cerveja artesanal de alta qualidade. Experimente uma ABC e verá a diferença.</p>&nbsp;
+			<p><a href="sobre.php">Saiba Mais</a></p>
+		</div><!-- contsegund -->
+	</div><!-- segundbloco -->
+	<div class="zeraestilos"></div>
+	<div id="terceibloco">
+	<span id="tres"></span>
+		<div id="conttercei">
+			<h1>ABC: ESPÉCIE EM VIAS DE EXPANSÃO</h1>
+			<p>&nbsp;</p>
+			<p>Após o sucesso da sua primeira edição de Craft Beer gourmet, a deliciosa Petisca, a ABC evoluiu para uma gama completa de cervejas produzidas segundo o método tradicional, naturalmente inspiradas nas espécies raras e protegidas do Parque Nacional da Arrábida. </p>
+			<p>&nbsp;</p>
+			<p>As Craft Beers ABC são apresentadas na típica garrafa de vidro escuro tradicional da Alemanha e com tampa tipo porcelana. Basta ouvir o “plup!” de abertura de uma ABC bem fresca para começar o prazer. Experimente!</p>
+			<div id="selectorprod">
+				<div id="seta">
+					<a onclick="moveprod('1', '1115', '223', 'produtosmasq');">
+						<div id="setaesq">
+						</div><!-- setaesq -->
+					</a>
+				</div><!-- seta -->
+				<div id="selector">
+					<div id="produtosmasq" style = "width: 1561px;"><!-- 223px por cada produto --!>
+						<div id="produto">
+						<a onclick="popups('0')">
+							<img src="images/doninhacastanhacopo.png" />
+						</a>
+						<h1>Doninha Castanha <span class="subtitprod">Clever Pilsner</span></h1>
+						<p>Reúna os amigos à volta da Arrábida e partilhe em pequenos goles desta cerveja Pilsner o delicioso sabor do malte.</p>
+						<p class="alcool">Álcool % Vol: 4.9%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=2">COMPRAR</a></p> -->
+						</div><!-- produto -->
+						<div id="produto">
+						<a onclick="popups('-500')">
+							<img src="images/melroazulcopo.png" />
+						</a>
+						<h1>Melro Azul <span class="subtitprod">Slow Wheat</span></h1>
+						<p>Voe mais alto com o incrível sabor do trigo. Em cada gole desta cerveja tradicional tudo parece mais leve e simples, como a vida na Arrábida é.</p>
+						<p class="alcool">Álcool % Vol: 5.3%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=4">COMPRAR</a></p> -->
+						</div><!-- produto -->
+						<div id="produto">
+						<a onclick="popups('-1000')">
+							<img src="images/corujabrancacopo.png" />
+						</a>
+						<h1>Coruja Branca <span class="subtitprod">Porter Spirit</span></h1>
+						<p>Faça um vôo na escuridão com as asas desta maravilhosa cerveja Porter e verá a sabedoria e a Magia da Arrábida levarem-no ainda mais longe.</p>
+						<p class="alcool">Álcool % Vol: 5.3%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=3">COMPRAR</a></p> -->
+						</div><!-- produto -->
+						<div id="produto">
+						<a onclick="popups('-1500')">
+							<img src="images/raposavermelhacopo.png" />
+						</a>
+						<h1>RAPOSA VERMELHA <span class="subtitprod">Smart Ale</span></h1>
+						<p>Em cada copo desta fantástica cerveja Ale vai descobrir um sabor ágil e criativo. Apure os instintos com o sabor frutado da Arrábida.</p>
+						<p class="alcool">Álcool % Vol: 5.9%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=1">COMPRAR</a></p> -->
+						</div><!-- produto -->
+						<div id="produto">
+						<a onclick="popups('-2000')">
+							<img src="images/falcaocinzentocopo.png" />
+						</a>
+						<h1>Falcão Cinzento <span class="subtitprod">Hunter Pale Ale</span></h1>
+						<p>Domine a Serra e a Costa tal como o animal mais veloz do mundo (385 km/h em mergulho!). Voe no lúpulo fresco desta Pale Ale ABC.</p>
+						<p class="alcool">Álcool % Vol: 5.2%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=5">COMPRAR</a></p> -->
+						</div><!-- produto -->
+						<div id="produto">
+			                        <a onclick="popups('-2500')">
+                        				 <img src="images/tritaocopo.png" />
+			                        </a>
+			                        <h1>Tritão Laranja <span class="subtitprod">Flashy IPA</span></h1>
+			                        <p>Acompanhe esta espécie ibérica em uma viagem através do sabor intenso e vibrante do nosso lúpulo. De tom acobreado, uma IPA para refrescar ao sol da Arrábida.</p>
+			                         <p class="alcool">Álcool % Vol: 6.2%</p><p></p>
+			                        <!-- <p class="butas"><a href="loja.php?p=5">COMPRAR</a></p> -->
+                        			</div><!-- produto -->
+						<div id="produto">
+						<a onclick="popups('-3000')">
+							<img src="images/petiscacopo.png" />
+						</a>
+						<h1>Petisca <span class="subtitprod">Thyme Lager</span></h1>
+						<p>Chegou a ABC Petisca, a cerveja com o leve e fresco toque do tomilho que vai bem com chocos, caracóis, tremoços, pica-pau e muito mais! Junta uma boa mesa de amigos e Petisca!</p>
+						<p class="alcool">Álcool % Vol: 5.1%</p><p></p>
+						<!-- <p class="butas"><a href="loja.php?p=5">COMPRAR</a></p> -->
+                        			</div><!-- produto -->
+
+					</div><!-- produtosmasq -->
+				</div><!-- selector -->
+				<div id="seta">
+					<a onclick="moveprod('-1', '1115', '223', 'produtosmasq');">
+						<div id="setadir">
+						</div><!-- setadir -->
+					</a>
+				</div><!-- seta -->
+			</div><!-- selectorprod -->
+		</div><!-- conttercei -->
+	</div><!-- terceibloco -->
+	<div class="zeraestilos"></div>
+	<div id="quartbloco">
+	<span id="quatro"></span>
+		<div id="contquart">
+			<h1>LOJA ABC EM FERMENTAÇÃO <span>(MAS JÁ PODE ENCOMENDAR AQUI)</span></h1>
+			<p>&nbsp;</p>
+			<p>Em breve poderá criar a sua conta (Login) para realizar e guardar as suas encomendas na nossa loja On-line. Até lá, pode pedir informações ou encomendar as suas cervejas ABC.</p>
+			<p>&nbsp;</p>
+			<p>Envie-nos um e-mail ou telefone para saber preços e formas de pagamento bem como agendar a data e local de entrega. </p>
+			<p>&nbsp;</p>
+			<p class="enco"><a onclick="vaiParaNaJanela('3552'); return true;">Contactos</a></p>
+		</div><!-- contquart -->
+	</div><!-- quartbloco -->
+	<div class="zeraestilos"></div>
+	<div id="quatmeiobloco">
+	<span id="quatmeio"></span>
+		<div id="contqmeio">
+			<div id="contqmeioesq">
+				<img src="images/taphouse.jpg" alt="Imagem da Tap House" />
+				<img src="images/transp.png" alt="espaçador" height="210px" width="40px" />
+			</div>
+			<div id="contqmeiodir">
+				<h1>O Resto é paisagem.</h1>
+				
+				<p><br>Reúna os amigos e venha conhecer a ABC TAP HOUSE. No coração de Sesimbra, a primeira e única “casa” para apreciar cerveja artesanal tirada à pressão e muito mais!</p>
+				<p class="forte"><br>CERVEJAS ARTESANAIS DA REGIÃO   |  PRATOS E PETISCOS DO MAR E DA SERRA  |  GELADOS ARTESANAIS  |  CAFÉ COM VISTA PARA O OCEANO<br><br></p>
+				<div id="contqmeiodirbx"><p><span>Sesimbra - Fortaleza de Santiago</span><br>5ª a 3ª feira, das 10h às 20h - horário de inverno <br>Todos os dias, das 10h às 24h - horário de verão</p></div>
+				<div id="contqmeiodirbxfb">
+					<object type="image/svg+xml" data="images/findUsOnFacebook-verde.svg" width="121px" height="27px"> </object>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="zeraestilos"></div>
+	<div id="cincbloco">
+	<span id="cinco"></span>
+		<div id="contcinc">
+			<h1>NOVIDADES & DICAS</h1>
+			<p>&nbsp;</p>
+			<div id="dicasmasq">
+				<div id="simbolo">
+					<a href="http://www.facebook.com" target="_blank"><img src="images/abc_simbolos_fb_pos.svg" width="156px" height="156px" onmouseover="this.src='images/abc_simbolos_fb.svg'" onmouseout="this.src='images/abc_simbolos_fb_pos.svg'" /></a>
+				</div><!-- simbolo -->
+				<div id="espacejador">
+					<img src="images/transp.png" width="52px" height="156px" />
+				</div><!-- espacejador -->
+				<div id="simbolo">
+					<a href="http://www.instagram.com" target="_blank"><img src="images/abc_simbolos_inst_pos.svg" width="156px" height="156px" onmouseover="this.src='images/abc_simbolos_inst.svg'" onmouseout="this.src='images/abc_simbolos_inst_pos.svg'" /></a>
+				</div><!-- simbolo -->
+				<div id="espacejador">
+					<img src="images/transp.png" width="52px" height="156px" />
+				</div><!-- espacejador -->
+				<div id="simbolo">
+					<a href="http://www.youtube.com" target="_blank"><img src="images/abc_simbolos_yt_pos.svg" width="156px" height="156px" onmouseover="this.src='images/abc_simbolos_yt.svg'" onmouseout="this.src='images/abc_simbolos_yt_pos.svg'" /></a>
+				</div><!-- simbolo -->
+				<div id="espacejador">
+					<img src="images/transp.png" width="52px" height="156px" />
+				</div><!-- espacejador -->
+				<div id="simbolo">
+					<a href="dicas.php"><img src="images/abc_simbolos_dicas_pos.svg" width="156px" height="156px" onmouseover="this.src='images/abc_simbolos_dicas.svg'" onmouseout="this.src='images/abc_simbolos_dicas_pos.svg'" /></a>
+				</div><!-- simbolo -->
+			</div><!-- dicasmasq -->
+		</div><!-- contcinc -->
+	</div><!-- cincbloco -->
+	<div class="zeraestilos"></div>
+	<div id="seisbloco">
+	<span id="seis"></span>
+		<div id="contseis">
+			<h1>ONDE ENCONTRAR O SABOR ABC</h1>
+			<p>&nbsp;</p>
+			<p>A ABC “Brewery” está numa localização única, mas também já poderá encontrar as cervejas ABC em bares e restaurantes nas regiões de Sesimbra, grande Lisboa e margem sul. São locais selecionados para que possa apreciar a sua Cerveja Artesanal com tempo, entre amigos e numa verdadeira experiência gourmet.</p>
+			<p>&nbsp;</p>
+			<p>Faça a sua encomenda e parta à descoberta de uma ABC em:</p>
+                        <p><a href="mailto:pedido@arrabidabeercompany.pt" style="font-weight:600;">pedido@arrabidabeercompany.pt</a></p> 
+			<!--<p>&nbsp;</p>-->
+			<!--<p>&nbsp;</p>-->
+			<p class="beber">"Beba com moderação. Se beber, não conduza." &nbsp; &nbsp;<img src="images/abc_simbolosrodapeh-gra.svg" />&nbsp;&nbsp;<img src="images/abc_simbolosrodapeh-vid.svg" />&nbsp;&nbsp;<img src="images/abc_simbolosrodapeh-reci.svg" /></p>
+			<div id="zeraestilos"></div>
+			<div id="ljrdpeh">
+				<div id="rdpehesq">
+					<p><span>Arrábida beer Company, lda</span><br><br><a href="mailto:geral@arrabidabeercompany.pt">geral@arrabidabeercompany.pt</a>
+					<br><br>
+					Rua do Caminho Branco, Lote 30<br>Charneca da Cotovia<br>2970-215 Sesimbra  PORTUGAL<br><a href="tel:+351212109428">(+351) 21 210 94 28</a>
+					</p>
+				</div><!-- rdpehesq -->
+				<div id="rdpehdir">
+					<a href="http://facebook.com"><img src="images/abc_simbolosrodapeh-fb-verde.svg" /></a>
+					<br>
+					<a href="http://instagram.com"><img src="images/abc_simbolosrodapeh-inst-verde.svg" /></a>
+					<br>
+					<a href="http://youtube.com"><img src="images/abc_simbolosrodapeh-yt-verde.svg" /></a>
+				</div><!-- rdpehdir -->
+			</div><!-- ljrdpeh -->
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+		</div><!-- contseis -->
+	</div><!-- seisbloco -->
+
+
+
+
+
+
+
+
+
+
+
+	<div class="zeraestilos"></div>
+	<div id="janelafull">
+			<div id="contudo">
+				<div id="seta">
+					<a onclick="moveprod('1', '1000', '500', 'contudomasq');">
+						<div id="setaesqmod">
+						</div><!-- setaesqmod -->
+					</a>
+				</div><!-- seta -->
+				<div id="contudselec">
+					<div id="contudomasq" style = "width: 3500px;"><!-- 500px por cada produto --!>
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_DoninhCast.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Doninha Castanha <span class="subtitcontud">Clever Pilsner</span></h3>
+							<p class="contudcorptxt">Coloração ouro claro, de espuma branca e persistente. Agradável aroma de lúpulos nobres que contrasta com um toque amargo subtil. Corpo leve, perfeita para um aperitivo.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 4.9% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 11.9%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: saladas, queijos frescos, carnes brancas e salada de frutas.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_MerlAzl.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Melro Azul <span class="subtitcontud">Slow Wheat</span></h3>
+							<p class="contudcorptxt">Cerveja de Trigo, do dourado ao amarelo palha na cor, de aparência turva. O trigo realça o sabor global para que aromas subtis possam emergir das cepas de leveduras utilizadas como a banana.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 5.3% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 12.5%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malta de Trigo e Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização.</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: saladas, carnes brancas, marisco e peixe da região.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_CorjBrn.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Coruja Branca <span class="subtitcontud">Porter Spirit</span></h3>
+							<p class="contudcorptxt">Típica Porter inglesa, atrativamente escura. Com característica encorpada e paladar seco, o seu aroma lembra avelã e café torrado. Colarinho espesso e cremoso.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 5.3 % &nbsp; &nbsp; &nbsp; &nbsp; Plato: 12.9%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização.</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: carnes grelhadas & fumadas, caça, queijos cremosos, doces com fruta ou chocolate.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_RapVerm.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Raposa Vermelha <span class="subtitcontud">Smart Ale</span></h3>
+							<p class="contudcorptxt">Aparência âmbar bronze, de espuma cremosa e espessa. “Dry-Hopping” em combinação com carácter intenso a malte, numa composição de aromas complexos. Para degustadores.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 5.9% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 13.8%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização.</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: quejios curados e carnes vermelhas.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_FalCinz.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>FALCÃO CINZENTO <span class="subtitcontud">Hunter Pale Ale</span></h3>
+							<p class="contudcorptxt">De coloração cobre e dourada, espuma cremosa e persistente. Aroma frutado e sabor ligeiramente malteado, equilibrado com a frescura do lúpulo. Amargor subtil com alto poder refrescante.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 5.2% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 12.5%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: queijos fortes (de cabra) e cranes brancas ou vermelhas grelhadas.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_TritLara.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Tritão Laranja <span class="subtitcontud">Flashy IPA</span></h3>
+							<p class="contudcorptxt">Acompanhe esta espécie ibérica em uma viagem através do sabor intenso e vibrante do nosso lúpulo. De tom acobreado, uma IPA para refrescar ao sol da Arrábida.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 6.2% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 14.2%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo e Levedura. <br>Sem filtragem e pasteurização.</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: Comidas bem condimentadas, salgados, fritos e carnes grelhadas.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+						<div id="produtmodal">
+							<div id="contudimg">
+							<img src="images/ImgGarrafCopModal_Petisc.jpg" />
+							</div><!-- contudimg -->
+							<div id="contudtext">
+							<h3>Petisca <span class="subtitcontud">Thyme Lager</span></h3>
+							<p class="contudcorptxt">Lager com tomilho, de coloração cobre e espuma cremosa. Encorpada, o seu aroma lembra a ervas aromáticas, de malte ligeiramente intenso, harmonizada com o amargor do lúpulo.</p>
+							<p class="contudcorptxt"><br>Álcool % Vol: 5.1% &nbsp; &nbsp; &nbsp; &nbsp; Plato: 12%</p>
+							<p class="contudcorptxt"><br>Ingredientes: Água, Malte de Cevada, Lúpulo, Tomilho e Levedura. <br>Sem filtragem e pasteurização.</p>
+							<p class="sublinha"></p>
+							<p class="contudcorptxt">Ideal com: mariscos, chocos ou caracóis, carnes aromáticas, queijo de cabra e peixe da região.</p>
+							</div><!-- contudtext -->
+						</div><!-- produtmodal -->
+					</div><!-- contudomasq -->
+				</div><!-- contudselec -->
+				<div id="seta">
+					<a onclick="moveprod('-1', '1000', '500', 'contudomasq');">
+						<div id="setadirmod">
+						</div><!-- setadirmod -->
+					</a>
+				</div><!-- seta -->
+			</div><!-- contudo -->
+	</div><!-- janelafull -->
+<?php
+	if ($_SESSION['idade'] != "min18")
+	{
+?>
+	<div id="janelavalida" class="fuverde" >
+		<div id="contudoval">
+			<object id = "validasvg" type="image/svg+xml" data="images/Validate_intro.svg" width="361px" height="276px"></object>
+			<div id="sobesobe">
+				<p class="textvalid">Tem mais de 18 anos? 
+				<form id = "validadatasim" class="textvalid"  method="post" action="">
+				<input type = "hidden" id="idade" name="idade" value="min18">
+				<a href="#" onclick="document.getElementById('validadatasim').submit();">SIM</a> | </form>
+				<form id = "validadata" class="textvalid"><a href="#" onclick="escolhanao();">NÃO</a></form>
+				</p>
+			</div>
+		</div>
+	</div>
+<?php
+	}
+?>
+<script src="rodscripts/jquery-1.11.3.min.js"></script>
+<script src="rodscripts/abc_rodscript.js"></script>
+<script src="rodscripts/abc_rodscript_reposicionamenu.js"></script>
+</body>
+</html>

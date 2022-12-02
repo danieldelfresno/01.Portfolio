@@ -1,0 +1,107 @@
+.portfolio {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: scroll;
+  padding: 150px 0 50px 0;
+  animation: smoothshow 0.7s ease-in;
+  .container {
+    width: 100%;
+    height: 100%;
+    .portfolio-item {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 400px;
+      position: relative;
+      // transform: translateY(-50%);
+      // top: 50%;
+      display: flex;
+      margin-bottom: 50px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid $text-color;
+      @include mq(0, 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .portfolio-data {
+        height: 400px;
+        width: 30%;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        .portfolio-data-text {
+          text-align: center;
+          height: 70%;
+          b {
+            color: red;
+            // font-size: 1.1rem;
+            font-weight: 600;
+          }
+          h1 {
+            font-size: 1.8rem;
+          }
+          p,
+          a {
+            margin-bottom: 5px;
+            position: relative;
+            top: 35%;
+            transform: translateY(-50%);
+            @include mq(0, 767px) {
+              top: 12%;
+              margin-bottom: 0px;
+            }
+          }
+          a {
+            width: 100%;
+            .btn {
+              margin: 0px 10px;
+            }
+          }
+        }
+        .portfolio-data-icons {
+          ul {
+            display: flex;
+            justify-content: center;
+            li {
+              width: 45px;
+              height: 45px;
+              margin: 5px;
+            }
+          }
+        }
+        @include mq(0, 767px) {
+          width: 100%;
+          padding-top: 10px;
+        }
+      }
+      .portfolio-img {
+        // border: 1px solid black;
+        height: 100%;
+        width: 70%;
+        @include mq(0, 767px) {
+          width: 100%;
+        }
+      }
+    }
+    .portfolio-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      &.taphouse {
+        background-image: url(../img/taphouse.jpeg);
+      }
+      &.arrabidabeer {
+        background-image: url(../img/abc.png);
+      }
+      &.editproject {
+        background-image: url(../img/artgem.png);
+      }
+      &.piggame {
+        background-image: url(../img/piggame.png);
+      }
+    }
+  }
+}

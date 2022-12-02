@@ -1,0 +1,26 @@
+$fontf01: 'Quicksand', sans-serif;
+$fontf02: 'Lovers Quarrel', cursive;
+$fontf03: 'Quicksand:700', sans-serif;
+$menufs_01: 18px;
+$menufs_02: 14px;
+$menufs_03: 25px;
+$main-color: blue;
+$light-text: lightblue;
+$menucol: #fff;
+$zigzagdeg: 0;
+
+// header 
+
+$hdicons_height: 35px;
+
+//images
+
+$scale_img: 1.1;
+$hover_time: .2s;
+$anime_curve: ease-in;
+
+@mixin mq($smallerValue,$biggerValue) {
+    @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+      @content;
+    }
+  }

@@ -1,0 +1,18 @@
+.construction {
+    width: 100%;
+    .wrapper {
+        width: 100%;
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        box-shadow: 10px 10px 20px gray;
+        padding: 4%;
+        img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+    }
+}

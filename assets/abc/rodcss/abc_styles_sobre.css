@@ -1,0 +1,488 @@
+body { font:13px serif; *font-size:small; *font:x-small; line-height:1.22;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;text-shadow: 1px 1px 1px rgba(0,0,0,0.004); }
+html, body, body div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section,
+time, mark, audio, video, a {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent none no-repeat 0 0;
+	color: #fff;
+	font-weight: normal;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+table { border-collapse:collapse; border-spacing:0;  font-size:inherit; font:100%;}
+input, select { vertical-align:middle;  font:99% sans-serif; color: #282828;}
+pre, code, kbd, samp { font-family: monospace, sans-serif; } 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
+html { -webkit-font-smoothing: antialiased; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+a:focus { outline: none; }
+ul { margin-left:0px; }
+ol { margin-left:0px; list-style-type: decimal; }
+
+small { font-size:85%; }
+strong{ font-weight: bold; }
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+input[type="radio"] { vertical-align: middle; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+::-moz-selection{ background: #484848; color:#fff; text-shadow: none; }
+::selection { background:#484848; color:#fff; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: #ccc; } 
+/* html { overflow-y: scroll; } */
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;-moz-appearance: none; appearance: none; margin: 0;}
+input[type=number] {-moz-appearance:textfield;}
+
+
+/* RESET STYLES END HERE */
+
+/* Fonts ABC */
+
+@font-face {
+	font-family: "AllerReg";
+	src: url("fonts/allerrg.eot");
+	src: url("fonts/allerrg.eot#iefix") format("embedded-opentype"),
+	url("fonts/allerrg.woff") format("woff"),
+	url("fonts/allerrg.ttf") format("truetype"),
+	url("fonts/allerrg.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "AllerBol";
+	src: url("fonts/allerbd.eot");
+	src: url("fonts/allerbd.eot#iefix") format("embedded-opentype"),
+	url("fonts/allerbd.woff") format("woff"),
+	url("fonts/allerbd.ttf") format("truetype"),
+	url("fonts/allerbd.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* Fim das Fonts ABC */
+
+*,*:before, *:after{
+
+
+    /*prefixos de compatibilidade*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.self-clear:before, .self-clear:after{
+    content: "";
+    display: table;
+}
+
+.self-clear:after{
+    clear: both;
+
+}
+/*hack para internet explorer*/
+.self-clear{
+    *zoom: 1;
+}
+
+
+html {
+/* 	background: transparent url(../images/bg-main.gif) repeat 0 0; */
+	height: 100%;
+	max-width: 1182px;
+	margin: 0 auto;
+	scroll-behavior: smooth;
+}
+
+body {
+	max-width: 100%;
+/* 	max-width: 768px; */
+	margin: 0px auto 0 auto;
+	background: #447f3b;
+/*	background: transparent url(../images/PTGhomefu.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	 	height: 100%; */
+	font-family:AllerBol,Sans-Serif;
+	color: #000;
+	font-size: 43px;
+	position: relative;
+/* 
+	border: 1px solid #000;
+ */
+}
+
+/* Menus */
+
+.zeraestilos {
+	clear: both;
+}
+
+#degrad {
+	position: fixed;
+	top: 0px;
+	max-width: 1182px;
+	height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 0;
+	color: black;
+}
+
+#degrad .corrig {
+	margin-top: 0px;
+}
+
+#moldurpeq {
+	position: absolute;
+	float: left;
+	z-index: 100;
+	width: 80%;
+    max-width: 1182px;
+    margin: 0 10%;
+}
+
+.logomenu {
+    min-width: 100px;
+    padding-top: 5px;
+}
+
+#contsegund {
+	position: relative;
+	text-align: center;
+	font-family: AllerReg;
+	font-size: 16pt;
+	color: #fff;
+	padding-top: 8%;
+	padding-bottom: 8%;
+	z-index: 5;
+}
+
+#contsegund h1 {
+	width: 80%;
+	max-width: 650px;
+	text-align: center;
+	font-family: AllerBol;
+	font-size: 18pt;
+	color: #fff;
+	margin: 0 auto;
+}
+
+#contsegund p {
+	width: 80%;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: AllerReg;
+	font-size: 10pt;
+	color: #fff;
+/* 	border: 1px solid #f00; */
+}
+
+#contsegund p > a {
+	text-decoration: none;
+	padding: 3px 5px 3px 5px;
+	border: 1px solid #fff;
+}
+
+#contsegund p > a:hover {
+	text-decoration: none;
+	padding: 3px 5px 3px 5px;
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: #447f3b;
+}
+
+#contsegund > p.contsegundsobr {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: AllerReg;
+    font-size: 10pt;
+    color: #fff;
+    width: 80%;
+}
+
+#sobrebloco {
+	max-width: 1182px;
+	min-height: 430px;
+/*	overflow: hidden;*/
+	background: #447f3b;
+}
+
+#contsegund p.justi {
+	width: 742px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	font-family: AllerReg;
+	font-size: 10pt;
+	color: #fff;
+/* 	border: 1px solid #f00; */
+}
+
+#contsegund h1.leftas {
+	width: 742px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-family: AllerBol;
+	font-size: 18pt;
+	color: #fff;
+}
+
+#imgsobr {
+    width: 100%;
+    max-width: 762px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#imgsobr img{
+    width: 130px;
+    margin: 8px;
+}
+
+#contsegund > #imgsobr > div > a {
+	cursor: pointer;
+}
+
+#janelafull {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 20;
+	color: #000;
+	background: rgba(00, 00, 00, 0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5000000, endColorstr=#e5000000);
+/* 
+	background: #000;
+	opacity: .9;
+ */
+}
+
+#janelavalida {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	overflow: hidden;
+}
+
+#contudo {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	/* border: 1px solid #f0f; */
+}
+
+#contudosbr {
+	position: relative;
+    max-width: 1182px;
+    height: auto;
+    top: 18%;
+    /* left: 32%; */
+    /* -ms-transform: translate(-50%, -50%); */
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* -moz-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+    opacity: 1;
+    /* border: 1px solid #f0f; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#contudoval {
+	position: relative;
+	width: 361px;
+	height: 276px;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	/* border: 1px solid #f0f; */
+}
+
+#setadirmod {
+	display: block;
+	height: 125px;
+	width: 38px;
+	margin-top: 137px;
+	background: url(../images/modalsetadir.png);
+}
+
+a > #setadirmod {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover > #setadirmod {
+	text-decoration: none;
+	background-position: 38px 0px;
+}
+
+#setaesqmod {
+	display: block;
+	height: 125px;
+	width: 38px;
+	margin-top: 137px;
+	background: url(../images/modalsetaesq.png);
+}
+
+a > #setaesqmod {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover > #setaesqmod {
+	text-decoration: none;
+	background-position: 38px 0px;
+}
+
+.setasbr {
+	margin-top: -10%;
+}
+
+#contudselec {
+	position: relative;
+	float: left;
+	width: 500px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#contudselecsbr {
+	position: relative;
+	float: left;
+	width: 791px;
+	height: 600px;
+	overflow: hidden;
+}
+
+#contudomasq {
+	position: absolute;
+	left: 0px;
+}
+
+#produtmodal {
+	float: left;
+	width: 500px;
+	height: 400px;
+}
+
+#produtmodalsbr {
+	float: left;
+	width: 791px;
+	height: 600px;
+}
+
+#produtmodalsbr img{
+	width: 100%;
+	max-width: 971px;
+}
+
+#contudimg {
+	float: left;
+	width: 195px;
+	height: 400px;
+	background: #fff;
+}
+
+#contudimgsbr {
+	float: left;
+	width: 791px;
+	height: 600px;
+	background: #fff;
+}
+
+#contudtext {
+	float: left;
+	width: 245px;
+	height: 340px;
+	padding: 30px;
+	background: #3c803d;
+}
+
+#contudtext > h3 {
+	padding-top: 15%;
+	text-transform: uppercase;
+	font-family: AllerBol;
+	font-size: 13px;
+	color: #fff;
+	padding-bottom: 10px;
+}
+
+#contudtext > p.contudcorptxt {
+	font-family: AllerBol;
+	font-size: 13px;
+	color: #fff;
+}
+
+.subtitcontud {
+	font-family: AllerReg;
+	font-size: 11px;
+	text-transform: none;
+}
+
+.sublinha {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}

@@ -1,0 +1,25 @@
+.hero {
+  // background-image: url(../img/hero_bg.jpeg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // height: 100vh;
+  // width: 100vw;
+  // margin-top: -90px;
+  .container {
+    height: 100%;
+    .hero-content {
+      //   background: red;
+      width: 100%;
+      top: 200px;
+      position: relative;
+      .languages {
+        .lang-item {
+          color: #ffffff;
+          font-family: "Titillium Web", sans-serif;
+          font-size: 6vw;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

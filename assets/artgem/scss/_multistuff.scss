@@ -1,0 +1,22 @@
+.multistuff {
+    max-width: 1240px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 10px 10px 40px black;
+    margin-bottom: 40px;
+    @include mq(0,1260px) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    // @include mq(0,620px) {
+    //     height: 1300px;
+    // }
+}
+.onlyinfo {
+    height: 100%;
+    @include mq(0,620px) {
+        height: 620px;
+    }
+}

@@ -1,0 +1,76 @@
+@import 'reset';
+@import 'config';
+
+@import 'header';
+@import 'footer';
+@import 'hero';
+@import 'grid';
+@import 'multistuff';
+@import 'newsletter';
+@import 'carrousel';
+@import 'allcat';
+@import 'information';
+@import 'abouthim';
+@import 'detail';
+@import 'basket';
+@import 'slick';
+@import 'slick-theme';
+@import 'login';
+@import 'underc';
+
+.wrapper {
+    // display: none;
+    max-width: 1240px;
+    margin: 0 auto;
+    height: 100%;
+    @include mq(0,1260px) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+body {
+	background-image: url(../assets/background2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+    object-fit: cover;
+    -webkit-background-clip: brightness(.9);
+}
+
+#bigbody {
+    display: none;
+    animation: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+	0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

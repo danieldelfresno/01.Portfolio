@@ -1,0 +1,65 @@
+.hero {
+    z-index: 99;
+    .wrapper {
+        height: 100%;
+        .backhero {
+            position: relative;
+            min-height: 400px;
+            height: 55vh;
+            width: 100%;
+            background-image: url(../assets/dd2303.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba($color: #b1a0a0, $alpha: .1);
+            // background-position: 30 50;
+            box-shadow: 0px 0px 30px black;
+            border-radius: 15px;
+            #hero_content {
+                position: absolute;
+                width: 100%;
+                top: 40%;
+                transform: translateY(-50%);
+                // width: 100%;
+                margin: 0 auto;
+                text-align: center;
+
+                h1 {
+                    font-family: $fontf02;
+                    font-size: 220px;
+                    line-height: 300px;
+                    text-shadow: 5px 5px rgba($color: #221616, $alpha: .4);
+                    background: -webkit-linear-gradient(rgb(240, 186, 186), rgb(1, 15, 93));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    // max-width: 190px;
+                    @include mq(0,998px){
+                        font-size:20vw;
+                    }
+                    @include mq(0,945px) {
+                        // width: 60%;
+                        line-height: normal;
+                        margin: 0 auto;
+                    }
+                    @include mq(0,620px) {
+                        font-size:  160px;
+                    }
+                    @include mq(0,620px) {
+                        font-size:  120px;
+                    }
+                }
+                p {
+                    font-family: $fontf01;
+                    font-size: 3vh;
+                    margin-bottom: 10px;
+                }
+                a {
+                    font-family: $fontf01;
+                    font-size: 2vh;
+                }
+            }
+        }
+    }
+}
+
+
+

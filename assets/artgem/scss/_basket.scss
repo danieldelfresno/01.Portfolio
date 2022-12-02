@@ -1,0 +1,381 @@
+.prodinfo {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.prodcol {
+    display: inline-block;
+    vertical-align: top;
+    width: 10%;
+}
+
+h3 {
+    position: relative;
+    top: 20%;
+    font-size: 18px;
+    text-align: center;
+    font-family: $fontf01;
+    // margin: 5px;
+}
+
+.zigzag {
+    // box-shadow: none;
+    // border: 1px solid red;
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(44, 105, 197);
+    width: 50px;
+    height: 1px;
+}
+
+.basketpage {
+    font-size: 0;
+    width: 100%;
+    .wrapper {
+        position: relative;
+        background-color: #fff;
+        border-radius: 15px;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 20px black;
+        #prodlist {
+            h1 {
+                font-size: 30px;
+                font-weight: 700;
+                font-family: $fontf01;
+                text-align: center;
+                padding: 40px 0;
+            }
+            ul {
+                margin: 0 15px 0 15px;
+                h2 {
+                    font-size: 18px;
+                    text-align: center;
+                    font-family: $fontf01;
+                    font-weight: 700;
+                    @include mq(0,945px) {
+                        display: none;
+                    }
+                }
+                .prodcol1 {
+                    @extend .prodcol;
+                    width: 25%;
+                    img {
+                        height: auto;
+                        width: 98%;
+                        position: relative;
+                        // margin: 5%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        @include mq(0,945px) {
+                            width: 90%;
+                        }
+                    }
+                    @include mq(0,945px) {
+                        width: 50%;
+                    }
+                }
+                .prodcol2 {
+                    @extend .prodcol;
+                    width: 25%;
+                    h3 {
+                        @extend h3;
+                        text-align: left;
+                        font-weight: 700;
+                    }
+                    p {
+                        position: relative;
+                        top: 30%;
+                        font-size: 18px;
+                        text-align: left;
+                        font-family: $fontf01;
+                        margin: 5px;
+                    }
+                    @include mq(0,945px) {
+                        width: 50%;
+                    }
+                }
+                .prodcol3 {
+                    .prodinfo {
+                        @include mq(0,945px) {
+                            height: 60px;
+                        }        
+                    }
+                    @extend .prodcol;
+                    width: 20%;
+                    @include mq(0,945px) {
+                        display: inline-block;
+                        width: 33%;
+                    }
+                }
+                .prodcol4 {
+                    .prodinfo {
+                        @include mq(0,945px) {
+                            height: 60px;
+                        }        
+                    }
+                    @extend .prodcol;
+                    width: 20%;
+                    @include mq(0,945px) {
+                        // display: block;
+                        width: 33%;
+
+                    }
+                }
+                .prodcol5 {
+                    .prodinfo {
+                        @include mq(0,945px) {
+                            height: 60px;
+                        }        
+                    }
+                    @extend .prodcol;
+                    h3 {
+                        @extend h3;
+                        font-weight: 700;
+                    }
+                    @include mq(0,945px) {
+                        // display: block;
+                        width: 33%;
+                    }
+                }
+            }
+            
+        }
+        .subtotal {
+            position: relative;
+            width: 98%;
+            margin: 10px auto;
+            background-color: rgb(187, 187, 187);
+            text-align: right;
+            h3 {
+                display: inline-block;
+                margin: 0 40px;
+                &:nth-child(2) {
+                    font-weight: 700;
+                }
+            }
+        }
+        .break {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            #zzcontainer {
+                position: relative;
+                margin: 0 auto;
+                width: 210px;
+                top: 20%;
+                .zzdiv {
+                    display: inline-block;
+                    position: relative;
+                    width: 70px;
+                    .zigzagdown {
+                        @extend .zigzag;
+                        transform-origin: center left;
+    
+                    }
+                    .zigzagup {
+                        @extend .zigzag;
+                        right: 0;
+                        transform-origin: center right;
+                    }
+                }
+            }
+            #checkoutbt {
+                position: absolute;
+                margin: 10px 0;
+                right: 50px;
+                top: 20%;
+                font-family: $fontf01;
+                width: 200px;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid lightblue;
+                background-color: #BBC9DD;
+                transition-duration: 500ms;
+                &:hover {
+                    background-color: #4A586E;
+                    color: white;
+                }
+            }
+        }
+        #userform {
+            position: relative;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0px 0px 20px gray;
+            display: none;
+            h1 {
+                font-family: $fontf01;
+                font-size: 40px;
+                padding: 80px 0 15px 0;
+                text-align: center;
+            }
+            p {
+                font-family: $fontf01;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 80px;
+            }
+            form {
+                width: 50%;
+                position: relative;
+                margin: 0 auto;
+                @include mq(0,945px) {
+                    width: 80%;
+                }
+                @include mq(0,767px ){
+                    width: 90%;
+                }
+                ul {
+                    li {
+                        font-size: 25px;
+                        label {
+                            font-family: $fontf01;
+                            width: 100%;
+                        }
+                        select {
+                            font-family: $fontf01;
+                            margin-bottom: 15px;
+
+                            width: 100%;
+                            height: 30px;
+                            border: none;
+                            border-radius: 4px;
+                            border: none;
+                            box-shadow: 2px 2px 5px gray;
+                        }
+                        input {
+                            font-family: $fontf01;
+                            width: 100%;
+                            height: 30px;
+                            border-radius: 4px;
+                            border: 1px solid lightgray;
+                            box-shadow: 2px 2px 5px gray;
+                        }
+                    }
+                    li:nth-child(2),li:nth-child(3),li:nth-child(5),li:nth-child(6),li:nth-child(7),li:nth-child(8) {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 49%;
+                    }
+                    li:nth-child(2),li:nth-child(5),li:nth-child(7) {
+                        margin-right: 8px;
+                        @include mq(0,767px) {
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+            hr {
+                width: 90%;
+            }
+            .break {
+                position: relative;
+                width: 100%;
+                height: 100px;
+                #zzcontainer2 {
+                    position: relative;
+                    margin: 0 auto;
+                    width: 210px;
+                    top: 20%;
+                    .zzdiv {
+                        display: inline-block;
+                        position: relative;
+                        width: 70px;
+                        .zigzagdown {
+                            @extend .zigzag;
+                            transform-origin: center left;
+        
+                        }
+                        .zigzagup {
+                            @extend .zigzag;
+                            right: 0;
+                            transform-origin: center right;
+                        }
+                    }
+                }
+            }
+            .payment {
+                width: 100%;
+                .amount {
+                    margin-bottom: 100px;
+                    p {
+                    margin-bottom: 5px;
+                    }
+                }
+                div {
+                    font-size: 25px;
+                    margin: 0 auto;
+                    width: 50%;
+                    @include mq(0,945px) {
+                        width: 80%;
+                    }
+                    @include mq(0,767px ){
+                        width: 90%;
+                    }
+                    label {
+                        font-family: $fontf01;
+                        width: 100%;
+                    }
+                    select {
+                        font-family: $fontf01;
+                        // margin: 15px;
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        border: none;
+                        border-radius: 4px;
+                        border: none;
+                        box-shadow: 2px 2px 5px gray;
+                    }
+                }
+                #placeorder {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin: 50px 0;
+                    font-family: $fontf01;
+                    width: 200px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid lightblue;
+                    background-color: #BBC9DD;
+                    transition-duration: 500ms;
+                    &:hover {
+                        background-color: #4A586E;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rotatedown {
+    transform: rotate(45deg);
+    animation-name: zigdown;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.rotateup {
+    transform: rotate(-45deg);
+    animation-name: zigdown2;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zigdown {
+    0% {transform: rotate(0deg);width: 35px};
+    100% {transform: rotate(45deg);width: 50px};
+}
+
+@keyframes zigdown2 {
+    0% {transform: rotate(0deg);width: 35px};
+    100% {transform: rotate(-45deg);width: 50px};
+}

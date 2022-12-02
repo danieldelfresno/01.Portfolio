@@ -1,0 +1,123 @@
+.categories {
+    height: 100%;
+    .wrapper {
+        height: 100%;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 10px 10px 40px black;
+        .allcat {
+            font-family: $fontf01;
+            text-decoration: none;
+        }
+        .catportraits {
+            width: 100%;
+            // background-color: greenyellow;
+            font-size: 0;
+            .porttitles {
+                text-decoration: none;
+                h1 {
+                    text-align: center;
+                    text-decoration: none;
+                    font-family: $fontf01;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    text-align: center;
+                    text-decoration: none;
+                    font-family: $fontf01;
+                    font-size: 15px;
+                }
+            }
+            #posts {
+                margin: 0 20px 0 20px;
+                .col {
+                    position: relative;
+                    display: inline-block;
+                    width: 25%;
+                    height: 100%;
+                    margin-bottom: 30px;
+                    // background-color: lightseagreen;
+                    @include mq(0,998px) {
+                        width: 33.333%;
+                    }
+                    @include mq(0,767px) {
+                        width: 50%;
+                    }
+                    @include mq(0,439px) {
+                        width: 100%;
+                    }
+                    a > img {
+                        max-width: 94%;
+                        border-radius: 15px;
+                        margin: 10px 10px;
+                        border: 8px solid white;
+                        filter: grayscale(60%);
+                        transition: all $hover_time $anime_curve;
+                        &:hover {
+                            transform: scale($scale_img);
+                            box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5);
+                            // filter: drop-shadow(16px 16px 20px black);
+                            // border: 5px solid White;
+                            filter: grayscale(0%);
+                            position: relative;
+                            z-index: 20;
+                        }
+                    }
+                    h3 {
+                        font-family: $fontf01;
+                        font-size: 20px;
+                        text-align: center;
+                    font-weight: 700;
+
+                    }
+                    h4 {
+                        font-family: $fontf01;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+                .col2 {
+                    position: relative;
+                    display: inline-block;
+                    width: 50%;
+                    height: 100%;
+                    margin-bottom: 30px;
+                    // background-color: lightseagreen;
+                    @include mq(0,767px) {
+                        width: 100%;
+                    }
+                    a > img {
+                        max-width: 94%;
+                        border-radius: 25px;
+                        margin: 10px 10px;
+                        border: 8px solid white;
+                        filter: grayscale(60%);
+                        transition: all $hover_time $anime_curve;
+                        &:hover {
+                            transform: scale($scale_img);
+                            box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5);
+                            // filter: drop-shadow(16px 16px 20px black);
+                            // border: 10px solid White;
+                            filter: grayscale(0%);
+                            position: relative;
+                            z-index: 2;
+                        }
+                    }
+                    h3 {
+                        font-family: $fontf01;
+                        font-size: 20px;
+                        text-align: center;
+                        font-weight: 700;
+                    }
+                    h4 {
+                        font-family: $fontf01;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.multistuff {
+    
+    .wrapper {
+        // height: 100%;
+        padding-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        .regular {
+            // height: 100%;
+            div {
+                height: 100%;
+                img {
+                    height: 200px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+    
+        
