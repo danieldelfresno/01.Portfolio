@@ -5,12 +5,15 @@
   .container {
     height: 100%;
     .content {
-      border: 1px solid #ffffff;
+      border: 1px solid indianred;
       .col100 {
         color: #ffffff;
         text-align: center;
         h1 {
           font-size: 3rem;
+          colored {
+            color: indianred;
+          }
         }
         h2 {
           font-size: 1.5rem;

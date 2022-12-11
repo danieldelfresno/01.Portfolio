@@ -1,24 +1,24 @@
-@import "reset";
-@import "config";
-@import "header";
-@import "hero";
-@import "animations";
-@import "portfolio";
-@import "home";
-@import "footer";
-@import "aboutme";
-@import "contacts";
+@import 'reset';
+@import 'config';
+@import 'header';
+@import 'hero';
+@import 'animations';
+@import 'portfolio';
+@import 'home';
+@import 'footer';
+@import 'aboutme';
+@import 'contacts';
 
 body,
 html {
   position: relative;
   // bottom: calc(10px + (100vh - 100%));
   width: 100vw;
-  height: 100hv;
+  height: 100vh;
   background-image: url(../img/hero_bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .container {
@@ -29,6 +29,10 @@ html {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.col50 {
+  width: 50%;
 }
 
 .col100 {
