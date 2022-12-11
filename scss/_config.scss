@@ -14,3 +14,43 @@ $animationlength: 1s;
     @content;
   }
 }
+
+/********************************************************************************
+***_________________________________VARIABLES________________________________***
+********************************************************************************/
+
+:root {
+  --primary-color: #000000;
+  --primary-color-alpha: #000000cf;
+  --secondary-color: #0f3142;
+  --font-color: #ffffff;
+  --font-color2: #cd5c5c;
+  --font-color3: #0971af;
+  --brighter-font-color3: #7dacc9;
+  --bg-color: rgba(0, 0, 0, 0.4);
+  --svg-invert: invert(0%)
+  --heading-color: #818cab;
+  --gradient-color: linear-gradient(#032839, #0b3b51);
+  --gradient-color-50deg: linear-gradient(50deg, #053d57, #15698f);
+  --progress-bar: #8f2121;
+  --shadow-color: rgb(11, 11, 11);
+  --main-background-img: url(../img/hero_bg.jpeg);
+}
+
+[data-theme='light'] {
+  --primary-color: #ffffff;
+  --primary-color-alpha: #ffffffcf;
+  --secondary-color: #dcdcdc;
+  --font-color: #000000;
+  --font-color2: #cd5c5c;
+  --font-color3: #0971af;
+  --brighter-font-color3: #7dacc9;
+  --bg-color: rgba(255, 255, 255, 0.4);
+  --svg-invert: invert(80%);
+  --heading-color: #818cab;
+  --gradient-color: linear-gradient(#032839, #0b3b51);
+  --gradient-color-50deg: linear-gradient(50deg, #053d57, #15698f);
+  --progress-bar: #8f2121;
+  --shadow-color: rgb(11, 11, 11);
+  --main-background-img: url(../img/desktop_light_theme.png);
+}

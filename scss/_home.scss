@@ -6,8 +6,9 @@
     height: 100%;
     .content {
       border: 1px solid indianred;
+      background-color: var(--primary-color-alpha);
       .col100 {
-        color: #ffffff;
+        color: var(--font-color);
         text-align: center;
         h1 {
           font-size: 3rem;

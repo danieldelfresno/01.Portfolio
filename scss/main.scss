@@ -15,7 +15,8 @@ html {
   // bottom: calc(10px + (100vh - 100%));
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/hero_bg.jpeg);
+  // background-image: url(../img/hero_bg.jpeg);
+  background-image: var(--main-background-img);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Titillium Web', sans-serif;

@@ -6,12 +6,14 @@
     height: 100%;
     .content {
       border: 1px solid limegreen;
+      background-color: var(--primary-color-alpha);
       .col100 {
-        color: #ffffff;
+        color: var(--font-color);
         text-align: center;
         padding: 40px 20px;
         h1 {
           font-size: 3rem;
+          color: var(--font-color);
         }
         ul {
           display: flex;
@@ -22,6 +24,7 @@
             cursor: pointer;
             a {
               img {
+                filter: var(--svg-invert);
                 @include mq(0, 767px) {
                   width: 60px;
                   height: 70px;

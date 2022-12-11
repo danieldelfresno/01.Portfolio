@@ -122,3 +122,30 @@ for (var square of carrouselsquares) {
 // for (var portitem of portfolioitems) {
 //   portitem.style.boxShadow = `0px 0px 35px #${Math.floor(Math.random() * 16777215).toString(16)}`;
 // }
+
+// Color Themes Code
+document.addEventListener('DOMContentLoaded', () => {
+  let theme = localStorage.getItem('data-theme')
+  const changeThemeToDark = () => {
+    document.documentElement.setAttribute('data-theme', '') // set theme to dark
+    localStorage.setItem('data-theme', 'dark') // save theme to local storage
+  }
+
+  const changeThemeToLight = () => {
+    document.documentElement.setAttribute('data-theme', 'light') // set theme light
+    localStorage.setItem('data-theme', 'light') // save theme to local storage
+  }
+
+  // Get the element based on ID
+  const checkbox = document.querySelector('.switch')
+  // Apply retrived them to the website
+  checkbox.addEventListener('change', () => {
+    console.log('changed')
+    let theme = localStorage.getItem('data-theme') // Retrieve saved them from local storage
+    if (theme === 'dark') {
+      changeThemeToLight()
+    } else {
+      changeThemeToDark()
+    }
+  })
+})
