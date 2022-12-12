@@ -89,7 +89,7 @@ function headerfooterwink() {
     header.classList.add('headerhalf')
     var closetimeout = 800
   } else {
-    var closetimeout = 400
+    var closetimeout = 0
   }
   setTimeout(() => {
     header.classList.remove('headerhalf')
@@ -148,4 +148,100 @@ document.addEventListener('DOMContentLoaded', () => {
       changeThemeToDark()
     }
   })
+
+  const projectdb = [
+    {
+      title: 'House Market-Place',
+      subtitle: 'React Course Project',
+      role: 'Backend & Frontend',
+      year: 2022,
+      website: false,
+      tools: ['javascript', 'react', 'mongodb'],
+      background: './img/projects/house-marketplace.png',
+    },
+    {
+      title: 'Git-Hub Finder',
+      subtitle: 'React Course Project',
+      role: 'Backend & Frontend',
+      year: 2022,
+      website: false,
+      tools: ['javascript', 'react'],
+      background: './img/projects/github-finder.png',
+    },
+    {
+      title: 'Pig Game',
+      subtitle: 'Javascript Course Project',
+      role: 'Javascript Algorithm',
+      year: 2021,
+      website: './assets/piggame/index.html',
+      tools: ['javascript'],
+      background: './img/projects/piggame.png',
+    },
+    {
+      title: 'Recuperar Portugal',
+      subtitle: 'State Website for Economical Growth',
+      role: 'Front-end',
+      year: 2021,
+      website: 'https://recuperarportugal.gov.pt',
+      tools: ['html', 'css', 'wordpress', 'javascript'],
+      background: './img/projects/recuperar-portugal.png',
+    },
+    {
+      title: 'ArtGem Store',
+      subtitle: 'Front-End Course Project',
+      role: 'The whole thing',
+      year: 2019,
+      website: './assets/artgem/index.html',
+      tools: ['html', 'css', 'sass', 'javascript'],
+      background: './img/projects/artgem.png',
+    },
+    {
+      title: 'TapHouse',
+      subtitle: 'Restaurant at Sesimbra Portugal',
+      role: 'The whole thing',
+      year: 2018,
+      website: 'https://www.taphouse.pt/',
+      tools: ['html', 'css', 'javascript'],
+      background: './img/projects/taphouse.jpeg',
+    },
+    {
+      title: 'Arrábida Beer Company',
+      subtitle: 'Artisan Beer Producer',
+      role: 'Responsive Behavior and Dynamic Pages',
+      year: 2018,
+      website: './assets/abc/index.html',
+      tools: ['html', 'css', 'javascript'],
+      background: './img/projects/abc.png',
+    },
+  ]
+
+  let portfolio = document.querySelector('.portfolio .container')
+
+  for (let i = 0; i < projectdb.length; ++i) {
+    portfolio.innerHTML += `<div class='portfolio-item'>
+            <div class='portfolio-data'>
+              <div class='portfolio-data-text'>
+                <h1>${projectdb[i].title}</h1>
+                <h2>${projectdb[i].subtitle}</h2>
+                <p><b>Role:</b> ${projectdb[i].role}</p>
+                <p><b>Year:</b> ${projectdb[i].year}</p>
+                <a href='${projectdb[i].website}' target='_blank' rel='noopener'>
+                  <button class='btn' ${!projectdb[i].website ? 'disabled=disabled' : ' '}>Visit website</button>
+                </a>
+              </div>
+              <div class='portfolio-data-icons'>
+                <ul id='code-tools-${i}'>
+                </ul>
+              </div>
+            </div>
+            <div class='portfolio-img' style='background-image: url("${projectdb[i].background}")'></div>
+          </div>`
+    var codetools = document.querySelector(`#code-tools-${i}`)
+    var ptools = projectdb[i].tools
+    for (let j = 0; j < ptools.length; j++) {
+      codetools.innerHTML += `<li>
+                      <img src='/img/${ptools[j]}.svg' alt='${ptools[j]} Logo' height='45' width='45' />
+                    </li>`
+    }
+  }
 })

@@ -45,11 +45,13 @@
             // transform: scale(1.1);
             text-shadow: $brighter-text-shadow;
           }
+          &:nth-last-child(0n + 2) {
+          }
           &:last-child {
             transform: rotate(90deg);
-            margin-top: 10px;
-            margin-left: -100px;
+            margin-left: -75px;
             margin-right: 0;
+            height: 25px;
           }
         }
         .logo {
