@@ -18,6 +18,7 @@ const aboutmesect = document.querySelector('.aboutme')
 const contactsect = document.querySelector('.contacts')
 const header = document.querySelector('.header')
 const footer = document.querySelector('footer')
+const menuburger = document.querySelector('.menuburger')
 
 // menuburger.addEventListener("click", () => {
 //   header.classList.toggle("menuopened");
@@ -32,9 +33,10 @@ const footer = document.querySelector('footer')
 function neondown(e) {
   for (var navitem of headeritems) {
     navitem.classList.remove('selected')
+    menuburger.classList.remove('open')
   }
   e.target.classList.toggle('selected')
-  if (currentitem === e.target.innerHTML) {
+  if (currentitem === e.target.innerHTML && !document.querySelector('.header').classList.contains('headerhalf')) {
     e.target.classList.toggle('blink')
     setTimeout(() => {
       e.target.classList.toggle('blink')
@@ -104,8 +106,6 @@ arrowdown.addEventListener('click', () => {
   arrowdown.classList.toggle('up')
 })
 
-const menuburger = document.querySelector('.menuburger')
-
 menuburger.addEventListener('click', () => {
   header.classList.toggle('headerhalf')
   menuburger.classList.toggle('open')
@@ -137,25 +137,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Get the element based on ID
-  const checkbox = document.querySelector('.switch')
+  // const checkbox = document.querySelector('.switch')
   // Apply retrived them to the website
-  checkbox.addEventListener('change', () => {
-    console.log('changed')
-    let theme = localStorage.getItem('data-theme') // Retrieve saved them from local storage
-    if (theme === 'dark') {
-      changeThemeToLight()
-    } else {
-      changeThemeToDark()
-    }
-  })
+  // checkbox.addEventListener('change', () => {
+  //   console.log('changed')
+  //   let theme = localStorage.getItem('data-theme') // Retrieve saved them from local storage
+  //   if (theme === 'dark') {
+  //     changeThemeToLight()
+  //   } else {
+  //     changeThemeToDark()
+  //   }
+  // })
 
   const projectdb = [
     {
       title: 'House Market-Place',
       subtitle: 'React Course Project',
       role: 'Backend & Frontend',
-      year: 2022,
-      website: false,
+      year: '2022',
+      website: '',
       tools: ['javascript', 'react', 'mongodb'],
       background: './img/projects/house-marketplace.png',
     },
@@ -163,16 +163,25 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Git-Hub Finder',
       subtitle: 'React Course Project',
       role: 'Backend & Frontend',
-      year: 2022,
-      website: false,
+      year: '2022',
+      website: '',
       tools: ['javascript', 'react'],
       background: './img/projects/github-finder.png',
+    },
+    {
+      title: 'Fictional University',
+      subtitle: '42 Hours of Wordpress Course',
+      role: 'Just a lerner',
+      year: '2021/2022',
+      website: '',
+      tools: ['wordpress', 'javascript', 'php', 'react', 'html', 'css'],
+      background: './img/projects/fictional_university.png',
     },
     {
       title: 'Pig Game',
       subtitle: 'Javascript Course Project',
       role: 'Javascript Algorithm',
-      year: 2021,
+      year: '2021',
       website: './assets/piggame/index.html',
       tools: ['javascript'],
       background: './img/projects/piggame.png',
@@ -181,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Recuperar Portugal',
       subtitle: 'State Website for Economical Growth',
       role: 'Front-end',
-      year: 2021,
+      year: '2021',
       website: 'https://recuperarportugal.gov.pt',
       tools: ['html', 'css', 'wordpress', 'javascript'],
       background: './img/projects/recuperar-portugal.png',
@@ -190,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'ArtGem Store',
       subtitle: 'Front-End Course Project',
       role: 'The whole thing',
-      year: 2019,
+      year: '2019',
       website: './assets/artgem/index.html',
       tools: ['html', 'css', 'sass', 'javascript'],
       background: './img/projects/artgem.png',
@@ -199,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'TapHouse',
       subtitle: 'Restaurant at Sesimbra Portugal',
       role: 'The whole thing',
-      year: 2018,
+      year: '2018',
       website: 'https://www.taphouse.pt/',
       tools: ['html', 'css', 'javascript'],
       background: './img/projects/taphouse.jpeg',
@@ -208,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Arrábida Beer Company',
       subtitle: 'Artisan Beer Producer',
       role: 'Responsive Behavior and Dynamic Pages',
-      year: 2018,
+      year: '2018',
       website: './assets/abc/index.html',
       tools: ['html', 'css', 'javascript'],
       background: './img/projects/abc.png',
@@ -225,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${projectdb[i].subtitle}</h2>
                 <p><b>Role:</b> ${projectdb[i].role}</p>
                 <p><b>Year:</b> ${projectdb[i].year}</p>
-                <a href='${projectdb[i].website}' target='_blank' rel='noopener'>
-                  <button class='btn' ${!projectdb[i].website ? 'disabled=disabled' : ' '}>Visit website</button>
+                <a href='${projectdb[i].website ? projectdb[i].website : '#'}' target='_blank' rel='noopener'>
+                  <button class='btn' ${!projectdb[i].website ? 'disabled="disabled"' : ' '}>Visit website</button>
                 </a>
               </div>
               <div class='portfolio-data-icons'>

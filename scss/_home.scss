@@ -2,26 +2,24 @@
   height: 100vh;
   animation: smoothshow 0.7s ease-in;
   padding: 130px 0 60px 0;
+  overflow: scroll;
   .container {
     height: 100%;
     .content {
       border: 1px solid indianred;
       background-color: var(--primary-color-alpha);
-      .col100 {
-        color: var(--font-color);
-        text-align: center;
-        line-height: 1.3;
-
-        h1 {
-          font-size: 3rem;
-          colored {
-            color: indianred;
-          }
+      color: var(--font-color);
+      text-align: center;
+      line-height: 1.3;
+      h1 {
+        font-size: 3rem;
+        colored {
+          color: indianred;
         }
-        h2 {
-          font-size: 1.5rem;
-          margin-bottom: 30px;
-        }
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
       }
     }
   }
